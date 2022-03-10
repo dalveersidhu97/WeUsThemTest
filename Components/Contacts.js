@@ -27,7 +27,7 @@ const Contacts = () => {
         contactsContent = <p>No contacts</p>
 
     if(contacts != false && contacts.length > 0){
-        contactsContent = <div><ul>{contacts.map(c => <li key={c.email}>
+        contactsContent = <div><ul className={styles.contactsList}>{contacts.map(c => <li key={c.email}>
             <div className={styles.contact-name}><IoIosContact></IoIosContact><b>{c.firstName}</b></div>
             <div>{c.email}</div>
             <br></br>

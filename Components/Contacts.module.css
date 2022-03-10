@@ -6,3 +6,9 @@
     text-transform: capitalize;
     margin-bottom: 15px;
 }
+.contactsList {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 20px;
+    margin-top: 20px;
+}
