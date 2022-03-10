@@ -3,8 +3,8 @@ import Login from '../Components/Login'
 import { LoginContext } from '../store/LoginContext'
 import Contacts from '../Components/Contacts';
 
-export default function Home() {
-
+export default function ContactsPage() {
+    
   const {loggedInUser} = useContext(LoginContext);
 
   let pageContent;
