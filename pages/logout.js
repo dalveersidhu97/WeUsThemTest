@@ -1,9 +1,9 @@
 import { useContext, useEffect } from 'react'
-import { Router } from "next/router";
+import { useRouter } from "next/router";
 import { LoginContext } from '../store/LoginContext'
 
 export default function Home() {
-
+  const Router = useRouter();
   const {logout} = useContext(LoginContext);
 
   useEffect(()=> {

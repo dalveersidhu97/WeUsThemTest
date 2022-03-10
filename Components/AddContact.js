@@ -1,8 +1,9 @@
-import { Router } from "next/router";
+import { useRouter } from "next/router";
 import { useState, useContext } from "react";
 import { LoginContext } from "../store/LoginContext";
 
 const AddContact = () => {
+  const Router = useRouter();
     const {loggedInUser} = useContext(LoginContext);
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');

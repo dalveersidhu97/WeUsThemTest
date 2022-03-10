@@ -1,10 +1,11 @@
-import { Router } from "next/router";
+import { useRouter } from "next/router";
 import { useState, useContext } from "react";
 import { LoginContext } from "../store/LoginContext";
 
 import { getCookies, setCookies, removeCookies } from 'cookies-next';
 
 const Login = () => {
+  const Router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(false);

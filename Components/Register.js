@@ -1,8 +1,9 @@
-import { Router } from "next/router";
+import { useRouter } from "next/router";
 import { useState, useContext } from "react";
 import { LoginContext } from "../store/LoginContext";
 
 const Register = () => {
+  const Router = useRouter();
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
