@@ -1,9 +1,8 @@
-import { useRouter } from "next/router";
+import { Router } from "next/router";
 import { useState, useContext } from "react";
 import { LoginContext } from "../store/LoginContext";
 
 const Register = () => {
-    const router = useRouter();
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -12,7 +11,7 @@ const Register = () => {
   const {login, loggedInUser} = useContext(LoginContext);
     
   if(loggedInUser){
-    router.replace('/contacts');
+    Router.replace('/contacts');
   }
 
   const handleEmailChange = (event) => {
@@ -48,7 +47,7 @@ const Register = () => {
       .then((data) => {
         
         if(data.status == 'success'){
-            router.push('/')
+            Router.push('/')
         }else {
             setError(data.error)
         }

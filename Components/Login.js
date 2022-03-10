@@ -1,22 +1,17 @@
-import { useRouter } from "next/router";
+import { Router } from "next/router";
 import { useState, useContext } from "react";
 import { LoginContext } from "../store/LoginContext";
 
 import { getCookies, setCookies, removeCookies } from 'cookies-next';
-// getCookies();
-// getCookie('key');
-// setCookies('key', 'value');
-// removeCookies('key'); 
 
 const Login = () => {
-    const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(false);
   const {login, loggedInUser} = useContext(LoginContext);
     
   if(loggedInUser){
-    router.replace('/contacts');
+    Router.replace('/contacts');
   }
 
   const handleEmailChange = (event) => {

@@ -1,7 +1,5 @@
 import { connectToDatabase } from "../../../db/mongodb"
 
-import { getCookies, setCookies, removeCookies } from 'cookies-next';
-
 export const config = {
     api: {
       bodyParser: {
