@@ -59,11 +59,11 @@ const AddContact = () => {
       <h1>Add a contact</h1>
       <form onSubmit={handleSubmit}>
       <label>First name</label>
-        <input type="text" onChange={handlefirstNameChange} value={firstName} placeholder="Enter first name" /><br></br>
+        <input type="text" onChange={handlefirstNameChange} value={firstName} placeholder="Enter first name" />
         <label>Last name</label>
-        <input type="text" onChange={handlelastNameChange} value={lastName} placeholder="Enter last name" /><br></br>
+        <input type="text" onChange={handlelastNameChange} value={lastName} placeholder="Enter last name" />
         <label>Email</label>
-        <input type="email" onChange={handleEmailChange} value={email} placeholder="Enter email" /><br></br>
+        <input type="email" onChange={handleEmailChange} value={email} placeholder="Enter email" />
         <input type="submit" value="Add contact" />
       </form>
 

@@ -2,15 +2,60 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Fredoka, Arial, Helvetica, sans-serif;
 }
-
 a {
-  color: inherit;
+  color: rgb(0, 0, 175);
   text-decoration: none;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+}
+h1, h2 {
+  text-align: center;
+}
+form {
+  max-width: 500px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 12px;
+}
+a, p, div, b {
+  font-size: 20px;
+}
+
+main {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+form input {
+  padding: 10px;
+  border-radius: 12px;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+nav, h1, form {
+  padding: 30px 10px;
+}
+
+ul {
+  padding: 30px;
+}
+ 
+
+svg {
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
 }

@@ -1,4 +1,4 @@
-
+import '../styles/globals.css'
 import Layout from "../Components/Layotu"
 import { LoginProvider } from "../store/LoginContext"
 

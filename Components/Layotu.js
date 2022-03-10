@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 import { useContext, useEffect } from "react";
 import { LoginContext } from "../store/LoginContext";
 
@@ -6,10 +7,16 @@ const Layout = (props) => {
   const { loggedInUser, login} = useContext(LoginContext);
 
   useEffect(()=> {
-    const user = localStorage.getItem('user');
-    if(user){
-        login(user);
+
+    const fn = async () => {
+      return await localStorage.getItem('user');
     }
+
+    const fn2 = async () => {
+      const user = await fn();
+      login(user);
+    }
+    fn2();
   }, [])
 
   let navLinks;
@@ -29,16 +36,17 @@ const Layout = (props) => {
     navLinks = (
       <>
         <li>
-          <Link href={"/contacts"}>Contats</Link>
+          <Link href={"/contacts"}>Contacts</Link>
         </li>
         <li>
           <Link href={"/add-contact"}>Add contact</Link>
         </li>
-        <h3>Logged in as {loggedInUser.firstName} <Link href={"/logout"}>Logout</Link></h3>
+        <li><h3>Logged in as {loggedInUser.firstName} <Link href={"/logout"}>Logout</Link></h3></li>
       </>
     );
   }
   return (
+    <>
     <div className="container">
       <h1>Contact book</h1>
       <nav>
@@ -46,6 +54,7 @@ const Layout = (props) => {
         {props.children}
       </nav>
     </div>
+    </>
   );
 };
 

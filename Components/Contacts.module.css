@@ -1,0 +1,8 @@
+.contact-name {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+}

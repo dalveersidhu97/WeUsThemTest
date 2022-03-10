@@ -32,7 +32,12 @@ const handlePost = async (req, res) => {
 
 const handleGet = async (req, res) => {
     const {db} = await connectToDatabase();
-    const contacts = await db.collection("contacts").find({'email': req.cookies.email}).toArray();
+    
+    
+    // filter queries
+    let queries = {}
+
+    const contacts = await db.collection("contacts").find({}).toArray();
     res.status(200).json(contacts);
 
 }

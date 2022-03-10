@@ -1,4 +1,8 @@
 import { useState, useEffect } from "react";
+
+import {IoIosContact} from 'react-icons/io';
+import styles from './Contacts.module.css';
+
 const Contacts = () => {
 
     const [contacts, setContacts] = useState([]);
@@ -24,16 +28,16 @@ const Contacts = () => {
 
     if(contacts != false && contacts.length > 0){
         contactsContent = <div><ul>{contacts.map(c => <li key={c.email}>
-            <div>{c.firstName}</div>
+            <div className={styles.contact-name}><IoIosContact></IoIosContact><b>{c.firstName}</b></div>
             <div>{c.email}</div>
             <br></br>
         </li>)}</ul></div>
     }
 
-    return <div>
+    return <main>
         <h2>Your contacts</h2>
         {contactsContent}
-    </div>
+    </main>
 
 
 }
