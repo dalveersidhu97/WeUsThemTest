@@ -1,18 +1,21 @@
 import { useRouter } from "next/router";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { LoginContext } from "../store/LoginContext";
 
 const AddContact = () => {
-  const Router = useRouter();
     const {loggedInUser} = useContext(LoginContext);
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [error, setError] = useState(false);
-    
-  if(!loggedInUser){
-    Router.push('/');
-  }
+  const Router = useRouter();
+  
+  useEffect(()=> {
+    if(!loggedInUser){
+      Router.push('/');
+    }  
+  }, [])
+
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
