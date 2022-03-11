@@ -20,11 +20,12 @@ form {
   max-width: 500px;
   margin: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 14px;
   background-color: #f7f7f7;
   padding: 20px;
   border-radius: 12px;
+  gap: 8pxp
 }
 a, p, div, b {
   font-size: 20px;
